@@ -1,0 +1,14 @@
+{
+  "entity": true,
+  "layouts": true,
+  "tab": true,
+  "acl": true,
+  "aclPortal": true,
+  "module": "Leady",
+  "customizable": true,
+  "stream": false,
+  "importable": true,
+  "notifications": false,
+  "object": true,
+  "hasPersonalData": true
+}

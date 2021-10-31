@@ -1,0 +1,12 @@
+{
+  "fields": {
+    "imperLeadCompanyId": {
+      "type": "int",
+      "isCustom": true
+    },
+    "turnoverDetail": {
+      "type": "text",
+      "isCustom": true
+    }
+  }
+}

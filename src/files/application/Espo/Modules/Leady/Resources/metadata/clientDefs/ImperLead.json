@@ -1,0 +1,23 @@
+{
+  "views":{
+    "detail":"leady:views/imper-lead/detail"
+  },
+  "menu": {
+    "detail": {
+      "buttons": [
+        {
+          "label": "Convert to Lead",
+          "action": "convertToLead",
+          "acl": "edit"
+        }
+      ]
+    }
+  },
+  "defaultSidePanelFieldLists": {
+    "detail": [
+      "createdAt"
+    ]
+  },
+  "createDisabled": true,
+  "iconClass": "fas fa-cloud"
+}

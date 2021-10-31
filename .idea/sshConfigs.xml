@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" host="demo.autocrm.cz" id="36a2460a-0744-47e7-a9bb-895880536c43" port="22" nameFormat="DESCRIPTIVE" username="demo.autocrm.cz" />
+    </configs>
+  </component>
+</project>

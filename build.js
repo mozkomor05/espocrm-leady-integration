@@ -14,30 +14,30 @@ const branch = helpers.getProcessParam('branch');
 
 if (helpers.hasProcessParam('all')) {
     fetchEspo({branch: branch})
-    .then(
-        () => install()
-    )
-    .then(
-        () => installExtensions()
-    )
-    .then(
-        () => copyExtension()
-    )
-    .then(
-        () => composerInstall()
-    )
-    .then(
-        () => rebuild()
-    )
-    .then(
-        () => afterInstall()
-    )
-    .then(
-        () => setOwner()
-    )
-    .then(
-        () => console.log('Done')
-    );
+        .then(
+            () => install()
+        )
+        .then(
+            () => installExtensions()
+        )
+        .then(
+            () => copyExtension()
+        )
+        .then(
+            () => composerInstall()
+        )
+        .then(
+            () => rebuild()
+        )
+        .then(
+            () => afterInstall()
+        )
+        .then(
+            () => setOwner()
+        )
+        .then(
+            () => console.log('Done')
+        );
 }
 
 if (helpers.hasProcessParam('install')) {
@@ -87,7 +87,7 @@ if (helpers.hasProcessParam('composer-install')) {
     });
 }
 
-function fetchEspo (params) {
+function fetchEspo(params) {
     params = params || {};
 
     return new Promise(function (resolve, fail) {
@@ -127,24 +127,23 @@ function fetchEspo (params) {
                         .pipe(
                             unzipper.Extract({path: 'site'})
                         ).on('close', function () {
-                            fs.unlinkSync('./site/archive.zip');
+                        fs.unlinkSync('./site/archive.zip');
 
-                            helpers.moveDir('./site/espocrm-' + branch.replace('/', '-'), './site').then(function () {
-                                resolve();
-                            });
-                        }).on('error', function () {
-                            console.log('  Error while unzipping.');
-                            fail();
+                        helpers.moveDir('./site/espocrm-' + branch.replace('/', '-'), './site').then(function () {
+                            resolve();
                         });
+                    }).on('error', function () {
+                        console.log('  Error while unzipping.');
+                        fail();
+                    });
                 });
-        }
-        else {
+        } else {
             // var command = "git archive --remote=\""+repository+"\" --output=\"./site/archive.zip\" " + branch;
         }
     });
 }
 
-function install () {
+function install() {
     return new Promise(function (resolve) {
         console.log('Installing EspoCRM instance...');
 
@@ -209,7 +208,7 @@ function install () {
     });
 }
 
-function buildEspo () {
+function buildEspo() {
     console.log('  Npm install...');
 
     cp.execSync("npm install", {cwd: './site', stdio: 'ignore'});
@@ -219,7 +218,7 @@ function buildEspo () {
     cp.execSync("grunt", {cwd: './site', stdio: 'ignore'});
 }
 
-function createConfig () {
+function createConfig() {
     const config = helpers.loadConfig();
 
     var configString = `<?php
@@ -241,7 +240,7 @@ function createConfig () {
     fs.writeFileSync('./site/data/config.php', configString);
 }
 
-function copyExtension () {
+function copyExtension() {
     return new Promise(function (resolve, fail) {
         console.log('Copying extension to EspoCRM instance...');
 
@@ -253,7 +252,7 @@ function copyExtension () {
 
             helpers.deleteDirRecursively('./site/application/Espo/Modules/' + moduleName);
         }
-
+        
         if (fs.existsSync('./site/client/modules/' + moduleNameHyphen)) {
             console.log('  Removing frontend files...');
 
@@ -281,7 +280,7 @@ function copyExtension () {
     });
 }
 
-function rebuild () {
+function rebuild() {
     return new Promise(function (resolve) {
         console.log('Rebuilding EspoCRM instance...');
 
@@ -291,7 +290,7 @@ function rebuild () {
     });
 }
 
-function afterInstall () {
+function afterInstall() {
     return new Promise(function (resolve) {
         console.log('Running after-install script...');
 
@@ -301,7 +300,7 @@ function afterInstall () {
     })
 }
 
-function buildExtension () {
+function buildExtension() {
     return new Promise(function (resolve) {
         console.log('Building extension package...');
 
@@ -364,7 +363,7 @@ function buildExtension () {
     });
 }
 
-function installExtensions () {
+function installExtensions() {
     return new Promise(function (resolve, fail) {
 
         if (!fs.existsSync('./extensions')) {
@@ -375,7 +374,7 @@ function installExtensions () {
 
         console.log("Installing extensions from 'extensions' directory...");
 
-        fs.readdirSync('./extensions/').forEach( function (file) {
+        fs.readdirSync('./extensions/').forEach(function (file) {
             if (path.extname(file).toLowerCase() != '.zip') {
                 return;
             }
@@ -395,7 +394,7 @@ function installExtensions () {
     });
 }
 
-function setOwner () {
+function setOwner() {
     return new Promise(function (resolve) {
         try {
             cp.execSync(
@@ -405,14 +404,14 @@ function setOwner () {
                     stdio: 'ignore',
                 }
             );
+        } catch (e) {
         }
-        catch (e) {}
 
         resolve();
     });
 }
 
-function composerInstall () {
+function composerInstall() {
     return new Promise(function (resolve, fail) {
         var moduleName = extensionParams.module;
 
@@ -422,7 +421,7 @@ function composerInstall () {
     });
 }
 
-function internalComposerInstall (modulePath) {
+function internalComposerInstall(modulePath) {
     if (!fs.existsSync(modulePath + '/composer.json')) {
 
         return;

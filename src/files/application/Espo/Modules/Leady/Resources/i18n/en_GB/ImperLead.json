@@ -1,0 +1,15 @@
+{
+  "fields": {
+    "companyContacts": "Company contact people",
+    "companyName": "Company name",
+    "firstTimestamp": "Session start",
+    "lastTimestamp": "Session end",
+    "companyEmail": "Company email",
+    "companyPhones": "Company phones",
+    "companyWebsite": "Company website",
+    "companyTerritory": "Company territory",
+    "referrer": "Came from (referrer)",
+    "searchQuery": "Google search query",
+    "actionList": "Action list"
+  }
+}

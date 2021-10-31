@@ -1,0 +1,71 @@
+{
+  "fields": {
+    "sessionId": {
+      "type": "int"
+    },
+    "companyContacts": {
+      "type": "varchar",
+      "isPersonalData": true
+    },
+    "companyId": {
+      "type": "int"
+    },
+    "companyName": {
+      "type": "varchar"
+    },
+    "companyTerritory": {
+      "type": "varchar"
+    },
+    "companyWebsite": {
+      "type": "url",
+      "strip": true
+    },
+    "companyEmail": {
+      "type": "url",
+      "strip": true,
+      "isPersonalData": true
+    },
+    "companyPhones": {
+      "type": "phone",
+      "isPersonalData": true
+    },
+    "companyEndpoint" : {
+      "type": "url"
+    },
+    "actionList": {
+      "type": "array"
+    },
+    "referrer" : {
+      "type": "url"
+    },
+    "searchQuery": {
+      "type": "varchar"
+    },
+    "firstTimestamp": {
+      "type": "datetime"
+    },
+    "lastTimestamp": {
+      "type": "datetime"
+    },
+    "createdAt": {
+      "type": "datetime",
+      "readOnly": true
+    },
+    "modifiedAt": {
+      "type": "datetime",
+      "readOnly": true
+    }
+  },
+  "convertEntityList": [
+    "Lead"
+  ],
+  "collection": {
+    "orderBy": "createdAt",
+    "order": "desc",
+    "textFilterFields": [
+      "name",
+      "companyName",
+      "emailAddress"
+    ]
+  }
+}

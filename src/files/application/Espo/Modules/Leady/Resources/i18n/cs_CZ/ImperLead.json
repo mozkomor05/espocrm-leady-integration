@@ -1,0 +1,18 @@
+{
+  "fields": {
+    "companyContacts": "Kontakty lidí společnosti",
+    "companyName": "Název společnosti",
+    "firstTimestamp": "Začátek návštěvy",
+    "lastTimestamp": "Konec návštěvy",
+    "companyEmail": "Email společnosti",
+    "companyPhones": "Telefon společnosti",
+    "companyWebsite": "Web společnosti",
+    "companyTerritory": "Teritoriums společnosti",
+    "referrer": "Přišel z (referrer)",
+    "searchQuery": "Vyhledávací query",
+    "actionList": "List akcí"
+  },
+  "labels": {
+    "Convert to Lead": "Konvertovat na potenciál"
+  }
+}

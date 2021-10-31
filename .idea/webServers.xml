@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="7a4e6f97-152c-44cc-a4fb-ca63698866e5" name="crm.wpdistro.cz" url="https://crm.wpdistro.cz">
+        <fileTransfer rootFolder="/home/crm.wpdistro.cz" accessType="SFTP" host="crm.wpdistro.cz" port="22" sshConfigId="19b44287-0358-4911-b983-aa14dc31695c" sshConfig="crm.wpdistro.cz@crm.wpdistro.cz:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="2b062ec5-ad76-47ed-aa88-6c46d97ff8e1" name="demo.autocrm.cz" url="http://demo.autocrm.cz">
+        <fileTransfer rootFolder="/home/demo.autocrm.cz" accessType="SFTP" host="demo.autocrm.cz" port="22" sshConfigId="36a2460a-0744-47e7-a9bb-895880536c43" sshConfig="demo.autocrm.cz@demo.autocrm.cz:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

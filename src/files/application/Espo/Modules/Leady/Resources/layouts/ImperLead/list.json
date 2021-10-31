@@ -1,0 +1,14 @@
+[
+  {
+    "name": "companyName",
+    "link": true
+  },
+  {
+    "name": "companyContacts",
+    "width": 60
+  },
+  {
+    "name": "firstTimestamp",
+    "width": 13
+  }
+]

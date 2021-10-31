@@ -1,0 +1,75 @@
+[
+  {
+    "label": "Overview",
+    "rows": [
+      [
+        {
+          "name": "companyName"
+        }
+      ],
+      [
+        {
+          "name": "companyContacts",
+          "fullWidth": true
+        }
+      ],
+      [
+        {
+          "name": "companyEmail"
+        },
+        {
+          "name": "companyPhones"
+        }
+      ],
+      [
+        {
+          "name": "companyWebsite"
+        },
+        false
+      ],
+      [
+        {
+          "name": "companyTerritory"
+        },
+        false
+      ]
+    ]
+  },
+  {
+    "label": "Actions",
+    "rows": [
+      [
+        {
+          "name": "actionList",
+          "hideLabel": true,
+          "fullWidth": true
+        }
+      ]
+    ]
+  },
+  {
+    "label": "Details",
+    "rows": [
+      [
+        {
+          "name": "referrer"
+        },
+        false
+      ],
+      [
+        {
+          "name": "searchQuery",
+          "fullWidth": true
+        }
+      ],
+      [
+        {
+          "name": "firstTimestamp"
+        },
+        {
+          "name": "lastTimestamp"
+        }
+      ]
+    ]
+  }
+]

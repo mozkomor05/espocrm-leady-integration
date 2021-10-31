@@ -1,8 +1,8 @@
 {
-    "module": "{@name}",
-    "name": "{@nameLabel}",
-    "description": "{@description}",
-    "author": "{@author}",
+    "module": "Leady",
+    "name": "Leady",
+    "description": "Leady.cz integration.",
+    "author": "mozkomor05",
     "acceptableVersions": [
         ">=5.9.0"
     ],
